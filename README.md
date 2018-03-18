@@ -1,17 +1,18 @@
 Basic example
 ---
 
-Initialize a map with coordinates set by React, update the state of coordinates
+Display the visual and textual directions between a location and a target location.
+
+<!-- Initialize a map with coordinates set by React, update the state of coordinates
 on map movement, and display that data in an element provided by the render
 function.
-
-![Demo gif](https://i.imgur.com/IGJuTuM.gif)
+ -->
+<!-- ![Demo gif](https://i.imgur.com/IGJuTuM.gif) -->
 
 ### Run it
 
-    git clone https://github.com/mapbox/mapbox-react-examples.git
+    git clone https://github.com/edisonneo/mapplr.git
 
-    cd mapbox-react-examples/basic
     npm install
     npm start
 
