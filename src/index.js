@@ -11,9 +11,9 @@ class Application extends React.Component {
     this.state = {
       steps: [],
       map: {},
-      lng: 103.8522,
-      lat: 1.2962 , 
-      zoom: 16,
+      lng: 103.8492,
+      lat: 1.2978, 
+      zoom: 17,
       locations:[
         {
           name:"Bencoolen MRT",
@@ -26,7 +26,7 @@ class Application extends React.Component {
               1.299069
           ],
           properties: {
-              textSize: 'txt-s',
+              textSize: 'txt-m',
               iconSize: 'wmax36',
               iconLink: "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678111-map-marker-256.png",
               bgColor: 'bg-white',
@@ -45,7 +45,7 @@ class Application extends React.Component {
               1.296970
           ],
           properties: {
-              textSize: 'txt-s',
+              textSize: 'txt-m',
               iconSize: 'wmax36',
               iconLink: "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678111-map-marker-256.png",
               bgColor: 'bg-white',
@@ -64,7 +64,7 @@ class Application extends React.Component {
               1.298076
           ],
           properties: {
-              textSize: 'txt-s',
+              textSize: 'txt-m',
               iconSize: 'wmax36',
               iconLink: "https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678111-map-marker-256.png",
               bgColor: 'bg-white',
@@ -83,7 +83,7 @@ class Application extends React.Component {
               1.296646
           ],
           properties: {
-              textSize: 'txt-m',
+              textSize: 'txt-l',
               iconSize: 'wmax60',
               iconLink: "https://cdn2.iconfinder.com/data/icons/flat-style-svg-icons-part-1/512/location_marker_pin-256.png",
               bgColor: 'bg-black',
@@ -228,20 +228,20 @@ class Application extends React.Component {
   }
 
   render() {
-
+     
     return (
       <div>
         <div className="directions py24 px24 absolute top left z5 hmax600 scroll-auto">
           <div>
-            <h4 className="directions__header py12 px12 mb12 round bg-white txt-bold txt-s none">Directions</h4>
+            <h4 className="directions__header py12 px12 mb12 round bg-white txt-bold txt-l none">Directions</h4>
           </div>
           <ul className="directions__list">
             {this.state.steps.map(function(step){
               if(step.distance > 0){
-                return <li className="directions__list-item round py6 px12 bg-darken75 color-white txt-xs mb6">{step.instruction} ({step.distance}m)</li>;
+                return <li className="directions__list-item round py6 px12 bg-darken75 color-white txt-m mb6">{step.instruction} ({step.distance}m)</li>;
               }
               else{
-                return <li className="directions__list-item round py6 px12 bg-darken75 color-white txt-xs mb6">{step.instruction}</li>;                
+                return <li className="directions__list-item round py6 px12 bg-darken75 color-white txt-m mb6">{step.instruction}</li>;                
               }              
             })}
           </ul>
